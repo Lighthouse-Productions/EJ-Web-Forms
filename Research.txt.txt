@@ -1,0 +1,9 @@
+https://tower61.com/web-form-e-mails-xml-attachment/
+
+https://www.tutdepot.com/php-e-mail-attachment-script/
+
+https://stackoverflow.com/questions/12301358/send-attachments-with-php-mail
+
+https://www.phptpoint.com/send-email-with-attachment-using-php/
+
+https://webcheatsheet.com/php/send_email_text_html_attachment.php
