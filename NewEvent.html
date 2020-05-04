@@ -1,0 +1,52 @@
+<html>
+  <head>
+    <title>Lighthouse Productions Event Request Questionnaire</title>
+  </head>
+  <body>
+    <form action="FormProcessor.php" method="post">
+      <h2>Contact Information</h2>
+      <label for="Firstname">First Name:</label>
+      <input type="text" id="Firstname" name="Firstname"/><br/>
+      <label for="Lastname">Last Name:</label>
+      <input type="text" id="Lastname" name="Lastname"/><br/>
+      <label for="Email">Email:</label>
+      <input type="text" id="Email" name="Email"/><br/>
+      <label for ="Phone">Phone:</label>
+      <input type="text" id="Phone" name="Phone"/><br/>
+      <h2>Company Information</h2>
+      <label for="Name1">Company Name:</label>
+      <input type="text" id="Name1" name="Name1"/><br/>
+      <label for="Street">Address 1:</label>
+      <input type="text" id="Street" name="Street"/><br/>
+      <label for="Line2">Address 2:</label>
+      <input type="text" id="Line2" name="Line2"/><br/>
+      <label for="City">City:</label>
+      <input type="text" id="City" name="City"/><br/>
+      <label for="State">State:</label>
+      <input type="text" id="State" name="State"/><br/>
+      <label for="Zip">Zip Code:</label>
+      <input type="text" id="Zip" name="Zip"/><br/>
+      <h2>Event Information</h2>
+      <label for="ProjectName">Event Name:</label>
+      <input type="text" id="ProjectName" name="ProjectName"/><br/>
+      <label for="StartDate">Equipment Needed:</label>
+      <input type="date" id="StartDate" name="StartDate"/><br/>
+      <label for="EndDate">Equipment Returned:</label>
+      <input type="date" id="EndDate" name="EndDate"/><br/>
+      <h3>Service Type</h3>
+      <label for="Delivery">Delivery</label>
+      <input type="radio" id="Delivery" name="ServiceType" value="Delivery"/><br/>
+      <label for="Setup">Setup</label>
+      <input type="radio" id="Setup" name="ServiceType" value="Setup"/><br/>
+      <label for="FullService">Full Service</label>
+      <input type="radio" id="FullService" name="ServiceType" value="FullService"/><br/>
+      <label for="Comment"><h3>Detailed Event Description</h3></label>
+      <input type="text" id="Comment" name="Comment"/><br/>
+      <!-- Hidden Stuff -->
+      <input type="text" id="IdStockType" name="IdStockType" hidden="true" value="5203"/>
+      <input type="text" id="Factor" name="Factor" hidden="true" value="1"/>
+      <input type="text" id="Price" name="Price" hidden="true" value="0"/>
+      <input type="submit" value="Submit"/>
+    </form>
+  </body>
+</html>
