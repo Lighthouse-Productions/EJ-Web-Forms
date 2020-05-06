@@ -62,7 +62,7 @@ $x.=']]></Comment>
       <Items>
         <Item>
           <IdStockType><![CDATA[';
-$x.=$_POST["IdStockType"];
+$x.=$_POST["IdStockType"]; //5203 Event
 $x.=']]></IdStockType>
           <Factor><![CDATA[';
 $x.=$_POST["Factor"];
@@ -75,5 +75,6 @@ $x.=']]></Price>
     </Body>
   </ShopOrder>
 </root>';
-echo $x;
+echo $x; //To be removed in the future
+file_put_contents("ejimport.ewsm", $x); //Saves X as EWSM XML File
 ?>
