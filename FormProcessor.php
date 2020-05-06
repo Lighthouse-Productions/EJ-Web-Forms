@@ -1,5 +1,4 @@
-<?php
-$x='<?xml version="1.0" encoding="utf-8"?>
+<?php $x='<?xml version="1.0" encoding="utf-8"?>
 <root>
   <ShopOrder Version="1.0.0">
     <Header>
