@@ -1,5 +1,4 @@
-<?php
-$x='<?xml version="1.0" encoding="utf-8"?>
+<?php $x='<?xml version="1.0" encoding="utf-8"?>
 <root>
   <ShopOrder Version="1.0.0">
     <Header>
@@ -62,7 +61,7 @@ $x.=']]></Comment>
       <Items>
         <Item>
           <IdStockType><![CDATA[';
-$x.=$_POST["IdStockType"];
+$x.=$_POST["IdStockType"]; //5203 Event
 $x.=']]></IdStockType>
           <Factor><![CDATA[';
 $x.=$_POST["Factor"];
@@ -75,5 +74,6 @@ $x.=']]></Price>
     </Body>
   </ShopOrder>
 </root>';
-echo $x;
+file_put_contents("G:\PleskVhosts\lhprod.com\httpdocs\ejimport.ewsm", $x); //Saves X as EWSM XML File
+echo $x; //To be removed in the future
 ?>
