@@ -1,7 +1,7 @@
 <?php
-$x='<?xml version=\"1.0\" encoding=\"utf-8\"?>
+$x='<?xml version="1.0" encoding="utf-8"?>
 <root>
-  <ShopOrder Version=\"1.0.0\">
+  <ShopOrder Version="1.0.0">
     <Header>
       <OrderId><![CDATA[998]]></OrderId>
       <CryptCode><![CDATA[]]></CryptCode>
