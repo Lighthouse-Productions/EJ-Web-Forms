@@ -74,6 +74,6 @@ $x.=']]></Price>
     </Body>
   </ShopOrder>
 </root>';
+file_put_contents("G:\PleskVhosts\lhprod.com\httpdocs\ejimport.ewsm", $x); //Saves X as EWSM XML File
 echo $x; //To be removed in the future
-file_put_contents("ejimport.ewsm", $x); //Saves X as EWSM XML File
 ?>
