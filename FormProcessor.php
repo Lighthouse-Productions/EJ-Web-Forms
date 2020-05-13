@@ -1,8 +1,11 @@
 <?php
+
 $x="" //make it global
 
-function MakeFile():
-{  // What follows is a long string concatenation of predetermined XML that is compliant with EJ, and inserts from POST data. I will comment the friendly name for each variable being included.
+function MakeFile()
+{
+  global $x;
+  // What follows is a long string concatenation of predetermined XML that is compliant with EJ, and inserts from POST data. I will comment the friendly name for each variable being included.
   $x='<?xml version="1.0" encoding="utf-8"?>
   <root>
     <ShopOrder Version="1.0.0">
@@ -80,18 +83,21 @@ function MakeFile():
     </ShopOrder>
   </root>';
 }
-function SendFile():
+function SendFile()
 {
   //The following line saves the string created above as an EWSM file on the server.
+  global $x;
   file_put_contents("G:\PleskVhosts\lhprod.com\httpdocs\ejimport.ewsm", $x); //Saves X as EWSM XML File - Absolute path specific to server
 }
-function PrintFile():
+function PrintFile()
 {
+    global $x
     echo $x; //To be removed in the future or pushed forward to a crash/confirm landing page.
 }
-function SendFile():
+function SendFile()
 {
   // This codeblock sends an email
+  global $x
 }
 // Code Execution Starts Here
 MakeFile();
