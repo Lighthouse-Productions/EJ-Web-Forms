@@ -79,59 +79,31 @@ $x.=']]></Price>
 //The following line saves the string created above as an EWSM file on the server.
 file_put_contents("G:\PleskVhosts\lhprod.com\httpdocs\ejimport.ewsm", $x); //Saves X as EWSM XML File - Absolute path specific to server
 echo $x; //To be removed in the future or pushed forward to a crash/confirm landing page.
-?>
 
-<?php
-//define the receiver of the email
-$to = 'nickw@lhprod.com';
-//define the subject of the email
-$subject = 'Test email with attachment';
-//create a boundary string. It must be unique
-//so we use the MD5 algorithm to generate a random hash
-$random_hash = md5(date('r', time()));
-//define the headers we want passed. Note that they are separated with \r\n
-$headers = "From: webmaster@lhprod.com\r\nReply-To: webmaster@lhprod.com";
-//add boundary string and mime type specification
-$headers .= "\r\nContent-Type: multipart/mixed; boundary=\"PHP-mixed-".$random_hash."\"";
-//read the atachment file contents into a string,
-//encode it with MIME base64,
-//and split it into smaller chunks
-$attachment = chunk_split(base64_encode(file_get_contents('ejimport.ewsm')));
-//define the body of the message.
-ob_start(); //Turn on output buffering
-?>
---PHP-mixed-<?php echo $random_hash; ?>
-Content-Type: multipart/alternative; boundary="PHP-alt-<?php echo $random_hash; ?>"
-
---PHP-alt-<?php echo $random_hash; ?>
-Content-Type: text/plain; charset="iso-8859-1"
-Content-Transfer-Encoding: 7bit
-
-Hello World!!!
-This is simple text email message.
-
---PHP-alt-<?php echo $random_hash; ?>
-Content-Type: text/html; charset="iso-8859-1"
-Content-Transfer-Encoding: 7bit
-
-<h2>Hello World!</h2>
-<p>This is something with <b>HTML</b> formatting.</p>
-
---PHP-alt-<?php echo $random_hash; ?>--
-
---PHP-mixed-<?php echo $random_hash; ?>
-Content-Type: application/zip; name="attachment.zip"
-Content-Transfer-Encoding: base64
-Content-Disposition: attachment
-
-<?php echo $attachment; ?>
---PHP-mixed-<?php echo $random_hash; ?>--
-
-<?php
-//copy current buffer contents into $message variable and delete current output buffer
-$message = ob_get_clean();
-//send the email
-$mail_sent = @mail( $to, $subject, $message, $headers );
-//if the message is sent successfully print "Mail sent". Otherwise print "Mail failed"
-echo $mail_sent ? "Mail sent" : "Mail failed";
-?>
+$file = "G:\PleskVhosts\lhprod.com\httpdocs\ejimport.ewsm";
+$file_size = filesize($file);
+$handle = fopen($file, "r");
+$content = fread($handle, $file_size);
+fclose($handle);
+$content = chunk_split(base64_encode($content));
+$uid = md5(uniqid(time()));
+$header = "From: webmaster@lhprod.com";
+$header .= "Reply-To: webmaster@lhprod.com";
+$header .= "MIME-Version: 1.0\r\n";
+$header .= "Content-Type: multipart/mixed; boundary=\"".$uid."\"\r\n\r\n";
+$header .= "This is a multi-part message in MIME format.\r\n";
+$header .= "--".$uid."\r\n";
+$header .= "Content-type:text/plain; charset=iso-8859-1\r\n";
+$header .= "Content-Transfer-Encoding: 7bit\r\n\r\n";
+$header .= $message."\r\n\r\n";
+$header .= "--".$uid."\r\n";
+$header .= "Content-Type: application/octet-stream; name=\"".$filename."\"\r\n"; // use different content types here
+$header .= "Content-Transfer-Encoding: base64\r\n";
+$header .= "Content-Disposition: attachment; filename=\"".$filename."\"\r\n\r\n";
+$header .= $content."\r\n\r\n";
+$header .= "--".$uid."--";
+if (mail("nickw@lhprod.com", "New Online Request", "", $header)) {
+  echo "mail send ... OK"; // or use booleans here
+} else {
+  echo "mail send ... ERROR!";
+}
