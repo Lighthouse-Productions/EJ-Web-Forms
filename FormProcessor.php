@@ -78,9 +78,7 @@ $x.=']]></Price>
 </root>';
 //The following line saves the string created above as an EWSM file on the server.
 file_put_contents('G:\PleskVhosts\lhprod.com\httpdocs\ejimport.ewsm', $x); //Saves X as EWSM XML File - Absolute path specific to server
-?>
 
-<?php
 //define the receiver of the email
 $to = 'nickw@lhprod.com';
 //define the subject of the email
