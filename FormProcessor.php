@@ -3,9 +3,7 @@
 $message = "";
 foreach($_POST as $key => $value)
 {
-  $message .= $key;
-	$message .= ": ";
-	$message .= $value.PHP_EOL;
+    $message .= $key . ": " . $value.PHP_EOL;
 }
 echo $message;
 
