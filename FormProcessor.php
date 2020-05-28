@@ -1,11 +1,14 @@
 <?php
 // Loop through all fields submitted, put field name and response on same line, then newline and and repeat
-$message = "";
+$x = "";
 foreach($_POST as $key => $value)
 {
-    $message .= $key . ": " . $value.PHP_EOL;
+	global $x;
+	$x .= $key . ": " . $value . "\r\n";
 }
-echo $message;
+//The following line saves the string created above as an EWSM file on the server.
+file_put_contents("G:\PleskVhosts\lhprod.com\httpdocs\ejimport.ewsm", $x); //Saves X as EWSM XML File - Absolute path specific to server
+echo $x;
 
 //define the receiver of the email
 $to = 'nickw@lhprod.com';
@@ -24,7 +27,7 @@ $headers .= "\r\nContent-Type: multipart/mixed; boundary=\"PHP-mixed-".$random_h
 $attachment = chunk_split(base64_encode(file_get_contents("G:\PleskVhosts\lhprod.com\httpdocs\ejimport.ewsm")));
 //define the body of the message.
 ob_start(); //Turn on output buffering
-
+$message = $x;
 //copy current buffer contents into $message variable and delete current output buffer
 //send the email
 $mail_sent = @mail( $to, $subject, $message, $headers );
