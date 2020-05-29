@@ -135,8 +135,8 @@ h1 {
 <div id="fadeshow1"></div> <!-- fadeshow1 div end -->
 <div id="content2">
 <div id="full_content">
-
       <form action="FormProcessor.php" method="post">
+<!-- DO NOT MODIFY ABOVE THIS LINE -->
       <h2>Contact Information</h2>
 
       <label for="Firstname">First Name:</label>
@@ -176,6 +176,13 @@ h1 {
 
       <h2>Event Information</h2>
 
+	  <label for="ServiceType">Service Type:</label>
+      <select name="ServiceType" id="ServiceType">
+        <option value="Delivery">Delivery</option>
+        <option value="Setup">Setup</option>
+        <option value="Full Service">Show</option>
+      </select><br/>
+
       <label for="ProjectName">Event Name:</label>
       <input type="text" id="ProjectName" name="ProjectName"/><br/>
 
@@ -190,8 +197,6 @@ h1 {
       <label for="EndDate">Equipment Need Ends:</label>
       <input type="date" id="EndDate" name="EndDate"/><br/>
 
-
-
       <label for="Setup">Setup Days & Times</label>
       <input type="text" id="Setup" name="Setup"/><br/>
 
@@ -201,22 +206,16 @@ h1 {
       <label for="Strike">Strike Days & Times</label>
       <input type="text" id="Strike" name="Strike"/><br/>
 
-      <label for="ServiceType">Service Type:</label>
-      <select name="ServiceType" id="ServiceType">
-        <option value="Delivery">Delivery</option>
-        <option value="Setup">Setup</option>
-        <option value="Full Service">Show</option>
-      </select>
-
       <label for="Comment"><h2>Description of event or equipment list:</h2></label>
-      <input type="text" id="Comment" name="Comment"/><br/>
+	    <textarea id="Comment" name="Comment" cols="40" rows="10"></textarea><br/>
 
-      <!-- Hidden Stuff -->
-<!--      <input type="text" id="IdStockType" name="IdStockType" hidden="true" value="5203"/>
-      <input type="text" id="Factor" name="Factor" hidden="true" value="1"/>
-      <input type="text" id="Price" name="Price" hidden="true" value="0"/>
--->
-	  <input type="submit" value="Submit"/>
-    </form></div></div></div>
+	    <input type="submit" value="Submit"/>
+
+<!-- DO NOT MODIFY BELOW THIS LINE -->
+    </form>
+
+
+//don't touch below here
+  </div></div></div>
   </body>
 </html>
