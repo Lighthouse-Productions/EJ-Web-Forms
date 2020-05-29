@@ -137,85 +137,41 @@ h1 {
 <div id="full_content">
       <form action="FormProcessor.php" method="post">
 <!-- DO NOT MODIFY ABOVE THIS LINE -->
-      <h2>Contact Information</h2>
-
-      <label for="Firstname">First Name:</label>
-
-      <input type="text" id="Firstname" name="Firstname"/><br/>
-
-      <label for="Lastname">Last Name:</label>
-      <input type="text" id="Lastname" name="Lastname"/><br/>
-
-      <label for="Email">Email:</label>
-      <input type="text" id="Email" name="Email"/><br/>
-
-      <label for ="Phone">Phone:</label>
-      <input type="text" id="Phone" name="Phone"/><br/>
-
-
-      <h2>Company Information</h2>
-
-      <label for="Name1">Company Name:</label>
-      <input type="text" id="Name1" name="Name1"/><br/>
-
-      <label for="Street">Address 1:</label>
-      <input type="text" id="Street" name="Street"/><br/>
-
-      <label for="Line2">Address 2:</label>
-      <input type="text" id="Line2" name="Line2"/><br/>
-
-      <label for="City">City:</label>
-      <input type="text" id="City" name="City"/><br/>
-
-      <label for="State">State:</label>
-      <input type="text" id="State" name="State"/><br/>
-
-      <label for="Zip">Zip Code:</label>
-      <input type="text" id="Zip" name="Zip"/><br/>
-
-
-      <h2>Event Information</h2>
-
-	  <label for="ServiceType">Service Type:</label>
-      <select name="ServiceType" id="ServiceType">
-        <option value="Delivery">Delivery</option>
-        <option value="Setup">Setup</option>
-        <option value="Full Service">Show</option>
-      </select><br/>
-
-      <label for="ProjectName">Event Name:</label>
-      <input type="text" id="ProjectName" name="ProjectName"/><br/>
-
-      <label for="Location">Event Location:</label>
-      <input type="text" id="Location" name="Location"/><br/>
-
-
-
-      <label for="StartDate">Equipment Need Begins:</label>
-      <input type="date" id="StartDate" name="StartDate"/><br/>
-
-      <label for="EndDate">Equipment Need Ends:</label>
-      <input type="date" id="EndDate" name="EndDate"/><br/>
-
-      <label for="Setup">Setup Days & Times</label>
-      <input type="text" id="Setup" name="Setup"/><br/>
-
-      <label for="ShowDays">Event Days & Times</label>
-      <input type="text" id="ShowDays" name="ShowDays"/><br/>
-
-      <label for="Strike">Strike Days & Times</label>
-      <input type="text" id="Strike" name="Strike"/><br/>
-
-      <label for="Comment"><h2>Description of event or equipment list:</h2></label>
-	    <textarea id="Comment" name="Comment" cols="40" rows="10"></textarea><br/>
-
-	    <input type="submit" value="Submit"/>
+      <table align="center">
+        <tr><th colspan="2">Contact Information</th></tr>
+        <tr><td><label for="Firstname">First Name:</label></td><td><input type="text" id="Firstname" name="Firstname"/></td></tr>
+        <tr><td><label for="Lastname">Last Name:</label></td><td><input type="text" id="Lastname" name="Lastname"/></td></tr>
+        <tr><td><label for="Email">Email:</label></td><td><input type="text" id="Email" name="Email"/></td></tr>
+        <tr><td><label for ="Phone">Phone:</label></td><td><input type="text" id="Phone" name="Phone"/></td></tr>
+        <tr><th colspan="2">Billing Information</h2></th></tr>
+        <tr><td><label for="Name1">Company Name:</label></td><td><input type="text" id="Name1" name="Name1"/></td></tr>
+        <tr><td><label for="Street">Address 1:</label></td><td><input type="text" id="Street" name="Street"/></td></tr>
+        <tr><td><label for="Line2">Address 2:</label></td><td><input type="text" id="Line2" name="Line2"/></td></tr>
+        <tr><td><label for="City">City:</label></td><td><input type="text" id="City" name="City"/></td></tr>
+        <tr><td><label for="State">State:</label></td><td><input type="text" id="State" name="State"/></td></tr>
+        <tr><td><label for="Zip">Zip Code:</label></td><td><input type="text" id="Zip" name="Zip"/></td></tr>
+        <tr><th colspan="2">Event Information</th></tr>
+        <tr><td><label for="ServiceType">Service Type:</label></td><td>
+          <select name="ServiceType" id="ServiceType">
+            <option value="Delivery">Delivery</option>
+            <option value="Setup">Setup</option>
+            <option value="Full Service">Show</option>
+          </select></td></tr>
+          <tr><td><label for="ProjectName">Event Name:</label></td><td><input type="text" id="ProjectName" name="ProjectName"/></td></tr>
+          <tr><td><label for="Location">Event Location:</label></td><td><input type="text" id="Location" name="Location"/></td></tr>
+          <tr><td><label for="StartDate">Equipment Need Begins:</label></td><td><input type="date" id="StartDate" name="StartDate"/></td></tr>
+          <tr><td><label for="EndDate">Equipment Need Ends:</label></td><td><input type="date" id="EndDate" name="EndDate"/></td></tr>
+          <tr><td><label for="Setup">Setup Days & Times</label></td><td><input type="text" id="Setup" name="Setup"/></td></tr>
+          <tr><td><label for="ShowDays">Event Days & Times</label></td><td><input type="text" id="ShowDays" name="ShowDays"/></td></tr>
+          <tr><td><label for="Strike">Strike Days & Times</label></td><td><input type="text" id="Strike" name="Strike"/></td></tr>
+          <tr><th colspan="2"><label for="Comment">Description of event or equipment list:</label></th></tr>
+	        <tr><td colspan="2"><textarea id="Comment" name="Comment" cols="40" rows="10"></textarea></td></tr>
+          <tr><td><input type="submit" value="Submit"/></td></tr>
+        </table>
 
 <!-- DO NOT MODIFY BELOW THIS LINE -->
     </form>
 
-
-//don't touch below here
   </div></div></div>
   </body>
 </html>
