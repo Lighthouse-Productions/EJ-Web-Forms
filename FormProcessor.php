@@ -71,7 +71,6 @@ $x.=']]></Comment>
         <Item>
           <IdStockType><![CDATA[';
 // EVERYTHING ABOVE THIS NEEDS A BIG FIX
-
 $x.=$_POST["IdStockType"]; //A number that represents an item to be added to the first job.  5203 is a fake item created to represent an Event request
 $x.=']]></IdStockType>
           <Factor><![CDATA[';
@@ -89,7 +88,7 @@ $x.=']]></Price>
 file_put_contents('G:\PleskVhosts\lhprod.com\httpdocs\ejimport.ewsm', $x); //Saves X as EWSM XML File - Absolute path specific to server
 
 // Loop through all fields submitted, put field name and response on same line, then newline and and repeat
-$to = 'shop@lhprod.com';
+$to = 'nickw@lhprod.com';
 $subject = 'New Online '.$_POST["ServiceType"].' Request';
 $mail_sent = @mail( $to, $subject, $y );
 //if the message is sent successfully print "Mail sent". Otherwise print "Mail failed"
