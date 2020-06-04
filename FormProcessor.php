@@ -89,7 +89,7 @@ file_put_contents('G:\PleskVhosts\lhprod.com\httpdocs\ejimport.ewsm', $x); //Sav
 // Loop through all fields submitted, put field name and response on same line, then newline and and repeat
 $to = 'nickw@lhprod.com, '.$_POST["Email"];
 $subject = $_POST["ProjectName"].' Project Request Recieved by LHP';
-$mail_sent = @mail( $to, $subject, $y );
+$mail_sent = @mail( $to, $subject, "The following information has been recieved by Lighthouse Productions.  We will get back to you shortly:\r\n\r\n".$y );
 //if the message is sent successfully print "Mail sent". Otherwise print "Mail failed"
 echo $mail_sent ? "Mail sent" : "Mail failed";
 ?>
