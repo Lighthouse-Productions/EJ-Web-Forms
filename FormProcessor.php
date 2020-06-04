@@ -91,5 +91,6 @@ $to = 'nickw@lhprod.com, '.$_POST["Email"];
 $subject = $_POST["ProjectName"].' Project Request Recieved by LHP';
 $mail_sent = @mail( $to, $subject, "The following information has been recieved by Lighthouse Productions.  We will get back to you shortly:\r\n\r\n".$y );
 //if the message is sent successfully print "Mail sent". Otherwise print "Mail failed"
-echo $mail_sent ? "Mail sent" : "Mail failed";
 ?>
+
+<? echo $mail_sent ? "Mail sent" : "Mail failed"; ?>
