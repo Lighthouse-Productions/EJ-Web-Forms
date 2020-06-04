@@ -230,7 +230,7 @@ h1 {
 <div id="fadeshow1"></div> <!-- fadeshow1 div end -->
 <div id="content2">
 <div id="full_content" align="center">
-<? echo $mail_sent ? "Mail sent" : "Mail failed";//PHP Pass Fail ?>
+<? echo $mail_sent ? '<h1>Your message has been recieved and a copy has been sent to you by email.</h1>' : '<h1 style="background-color:red;">An Error Has Occured</h1><p>An error has occured sending your message, please copy and paste the lines below and email to shop@lhprod.com to submit your request.</p><br/><p>'.$y."</p>";//PHP Pass Fail ?>
 </div></div></div>
   </body>
 </html>
