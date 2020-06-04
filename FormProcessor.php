@@ -87,7 +87,7 @@ $x.=']]></Price>
 file_put_contents('G:\PleskVhosts\lhprod.com\httpdocs\ejimport.ewsm', $x); //Saves X as EWSM XML File - Absolute path specific to server
 
 // Loop through all fields submitted, put field name and response on same line, then newline and and repeat
-$to = 'nickw@lhprod.com, '.$_POST["Email"];
+$to = 'shop@lhprod.com, '.$_POST["Email"];
 $subject = $_POST["ProjectName"].' Project Request Recieved by LHP';
 $mail_sent = @mail( $to, $subject, "The following information has been recieved by Lighthouse Productions.  We will get back to you shortly:\r\n\r\n".$y );
 //if the message is sent successfully print "Mail sent". Otherwise print "Mail failed"
