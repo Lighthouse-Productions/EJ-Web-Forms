@@ -138,34 +138,83 @@ h1 {
       <form action="FormProcessor.php" method="post">
 <!-- DO NOT MODIFY ABOVE THIS LINE -->
       <table align="center">
-        <tr><th colspan="2">Contact Information</th></tr>
-        <tr><td><label for="Firstname">First Name:</label></td><td><input type="text" id="Firstname" name="Firstname"/></td></tr>
-        <tr><td><label for="Lastname">Last Name:</label></td><td><input type="text" id="Lastname" name="Lastname"/></td></tr>
-        <tr><td><label for="Email">Email:</label></td><td><input type="text" id="Email" name="Email"/></td></tr>
-        <tr><td><label for ="Phone">Phone:</label></td><td><input type="text" id="Phone" name="Phone"/></td></tr>
-        <tr><th colspan="2">Billing Information</h2></th></tr>
-        <tr><td><label for="Name1">Company Name:</label></td><td><input type="text" id="Name1" name="Name1"/></td></tr>
+        <tr><th colspan="2">Event Inquiry Form</th></tr>
+        <tr><th colspan="2"><i>The following information will help us to accurately quote your event.<br>Please provide as much information as possible.<br><label style="color:red;">*</label>Required Fields</i></th></tr>
+        <tr><th colspan="2"><br>Contact Information</th></tr>
+        <!--EJ Contact First Name-->
+        <tr><td><label for="Firstname">First Name:</label><label style="color:red;">*</label></td><td><input type="text" id="Firstname" name="Firstname" required/></td></tr>
+        <!--EJ Contact Last Name-->
+        <tr><td><label for="Lastname">Last Name:</label><label style="color:red;">*</label></td><td><input type="text" id="Lastname" name="Lastname" required/></td></tr>
+        <!--EJ Company Email-->
+        <tr><td><label for="Email">Email:</label><label style="color:red;">*</label></td><td><input type="text" id="Email" name="Email" required/></td></tr>
+        <!--EJ Company Phone-->
+        <tr><td><label for ="Phone">Phone:</label><label style="color:red;">*</label></td><td><input type="text" id="Phone" name="Phone" required/></td></tr>
+        <tr><th colspan="2"><br>Billing Information</h2></th></tr>
+        <!--EJ Company Name-->
+        <tr><td><label for="Name1">Company Name:</label><label style="color:red;">*</label></td><td><input type="text" id="Name1" name="Name1" required/></td></tr>
+        <!--EJ Company Name2 -->
+      <!--  <tr><td><label for="Line2">Address 2:</label></td><td><input type="text" id="Line2" name="Line2"/></td></tr> -->
+        <tr><td colspan="2"><i>If you are a new customer please provide your billing address.</i></td></tr>
+        <!--EJ Company Street-->
         <tr><td><label for="Street">Address 1:</label></td><td><input type="text" id="Street" name="Street"/></td></tr>
-        <tr><td><label for="Line2">Address 2:</label></td><td><input type="text" id="Line2" name="Line2"/></td></tr>
+        <!--EJ Company City-->
         <tr><td><label for="City">City:</label></td><td><input type="text" id="City" name="City"/></td></tr>
+        <!--EJ Company State-->
         <tr><td><label for="State">State:</label></td><td><input type="text" id="State" name="State"/></td></tr>
+        <!--EJ Company Zip-->
         <tr><td><label for="Zip">Zip Code:</label></td><td><input type="text" id="Zip" name="Zip"/></td></tr>
-        <tr><th colspan="2">Event Information</th></tr>
-        <tr><td><label for="ServiceType">Service Type:</label></td><td>
-          <select name="ServiceType" id="ServiceType">
-            <option value="Delivery">Delivery</option>
-            <option value="Setup">Setup</option>
-            <option value="Full Service">Show</option>
-          </select></td></tr>
-          <tr><td><label for="ProjectName">Event Name:</label></td><td><input type="text" id="ProjectName" name="ProjectName"/></td></tr>
-          <tr><td><label for="Location">Event Location:</label></td><td><input type="text" id="Location" name="Location"/></td></tr>
-          <tr><td><label for="StartDate">Equipment Need Begins:</label></td><td><input type="date" id="StartDate" name="StartDate"/></td></tr>
-          <tr><td><label for="EndDate">Equipment Need Ends:</label></td><td><input type="date" id="EndDate" name="EndDate"/></td></tr>
-          <tr><td><label for="Setup">Setup Days & Times</label></td><td><input type="text" id="Setup" name="Setup"/></td></tr>
-          <tr><td><label for="ShowDays">Event Days & Times</label></td><td><input type="text" id="ShowDays" name="ShowDays"/></td></tr>
-          <tr><td><label for="Strike">Strike Days & Times</label></td><td><input type="text" id="Strike" name="Strike"/></td></tr>
+        <tr><th colspan="2"><br>Event Location</th></tr>
+        <!--EJ Project Name-->
+        <tr><td><label for="ProjectName">Event Name:</label><label style="color:red;">*</label></td><td><input type="text" id="ProjectName" name="ProjectName"/></td></tr>
+        <!--EJ NOTES-->
+        <tr><td><label for="Venue Location">Venue Name:</label><label style="color:red;">*</label></td><td><input type="textarea" id="Venue Location" name="Venue Name"/></td></tr>
+        <tr><td colspan="2"><i>If this is a "new to Lighthouse venue" <br>please provide additional information.</i></td></tr>
+        <!--EJ Notes-->
+        <tr><td><label for="Venue Street">Venue Address 1:</label></td><td><input type="text" id="Venue Street" name="Venue Street"/></td></tr>
+        <!--EJ Notes-->
+        <tr><td><label for="Venue City">Venue City:</label></td><td><input type="text" id="City" name="Venue City"/></td></tr>
+        <!--EJ Notes-->
+        <tr><td><label for="Venue State">Venue State:</label></td><td><input type="text" id="Venue State" name="Venue State"/></td></tr>
+        <!--EJ Notes-->
+        <tr><td><label for="Venue Zip"> Venue Zip Code:</label></td><td><input type="textbox" id="Venue Zip" name="Venue Zip"/></td></tr>
+        <tr><td><label for="Venue Notes">Venue information:<i>
+                    <br>&emsp;Type?
+                    <br>&emsp;Indoor/Outdoor?
+                    <br>&emsp;Power?
+                    <br>&emsp;Rigging?
+                    <br>&emsp;Size?
+                    <br>&emsp;Capacity?
+                    <br>&emsp;Other?</i> </label></td><td><textarea rows="7" id="Venue Notes" name="Venue Notes"/></textarea></td></tr>
+
+        <tr><th colspan="2"><br>Schedule</th></tr>
+          <tr><td><label for="StartDate">Start Date:</label><label style="color:red;">*</label></td><td><input type="date" id="StartDate" name="StartDate"/></td></tr>
+          <tr><td><label for="EndDate">End Date:</label><label style="color:red;">*</label></td><td><input type="date" id="EndDate" name="EndDate"/></td></tr>
+          <tr><td><label for="Setup">When is setup?</label></td><td><input type="text" id="Setup" name="Setup"/></td></tr>
+          <tr><td><label for="ShowDays">When is the show(s)?</label></td><td><input type="text" id="ShowDays" name="ShowDays"/></td></tr>
+          <tr><td><label for="Strike">When is take down?</label></td><td><input type="text" id="Strike" name="Strike"/></td></tr>
           <tr><th colspan="2"><label for="Comment">Description of event or equipment list:</label></th></tr>
-	        <tr><td colspan="2"><textarea id="Comment" name="Comment" cols="40" rows="10"></textarea></td></tr>
+          <tr><td><label for="ServiceType">Service Type:</label></td><td>
+            <select name="ServiceType" id="ServiceType">
+              <option value="Full-Service"> </option>
+              <option value="Full-Service">Equipment and Technicians</option>
+              <option value="Resource only">Technician (no equipment)</option>
+              <option value="Full-Service">Rental</option>
+            </select></td></tr>
+          <!--EJ Comment (Notes)-->
+          <tr><td colspan="2">Additional helpful Information:
+           <i><br>&emsp;What type of event is this?
+              <br>&emsp;How many people are you expecting?
+              <br>&emsp;What type of equipment do you need
+              <Br>&emsp;(Sound,Lights,Video,Stage,Backline,Power)?
+              <br>&emsp;What is the schedule?
+              <br>&emsp;What entertainers are performing?
+              <br>&emsp;Do you have a rider from your entertainers?
+              <br>&emsp;Are your dates subject to change?
+              <br>&emsp;Who is providing hotels if needed?
+              <br>&emsp;Are stagehands provided?
+              <br>&emsp;Do you have a rider from your entertainer?
+              <br>&emsp;Other?
+	        <tr><td colspan="2"><textarea id="Comment" name="Comment" cols="60" rows="10"></textarea></td></tr>
           <tr><td><input type="submit" value="Submit"/></td></tr>
         </table>
 

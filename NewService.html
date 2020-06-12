@@ -137,85 +137,80 @@ h1 {
 <div id="full_content">
       <form action="FormProcessor.php" method="post">
 <!-- DO NOT MODIFY ABOVE THIS LINE -->
-      <h2>Contact Information</h2>
+      <table align="center">
+        <tr><th colspan="2">Service Inquiry Form</th></tr>
+        <tr><th colspan="2"><i>The following information is required for service.<br><label style="color:red;">*</label>Required Fields</i></th></tr>
+        <tr><th colspan="2"><br>Contact Information</th></tr>
+        <!--EJ Contact First Name-->
+        <tr><td><label for="Firstname">First Name:</label><label style="color:red;">*</label></td><td><input type="text" id="Firstname" name="Firstname"/></td></tr>
+        <!--EJ Contact Last Name-->
+        <tr><td><label for="Lastname">Last Name:</label><label style="color:red;">*</label></td><td><input type="text" id="Lastname" name="Lastname"/></td></tr>
+        <!--EJ Company Email-->
+        <tr><td><label for="Email">Email:</label><label style="color:red;">*</label></td><td><input type="text" id="Email" name="Email"/></td></tr>
+        <!--EJ Company Phone-->
+        <tr><td><label for ="Phone">Phone:</label><label style="color:red;">*</label></td><td><input type="text" id="Phone" name="Phone"/></td></tr>
+        <tr><th colspan="2"><br>Billing Information</h2></th></tr>
+        <!--EJ Company Name-->
+        <tr><td><label for="Name1">Company Name:</label><label style="color:red;">*</label></td><td><input type="text" id="Name1" name="Name1"/></td></tr>
+        <tr><td colspan="2">&emsp;<i>Enter your name if not affiliated with a company.</i></td></tr>
+        <!--EJ Company Name2 -->
+      <!--  <tr><td><label for="Line2">Address 2:</label></td><td><input type="text" id="Line2" name="Line2"/></td></tr> -->
+        <!--EJ Company Street-->
+        <tr><td><label for="Street">Address 1:</label></td><td><input type="text" id="Street" name="Street"/></td></tr>
+        <!--EJ Company City-->
+        <tr><td><label for="City">City:</label></td><td><input type="text" id="City" name="City"/></td></tr>
+        <!--EJ Company State-->
+        <tr><td><label for="State">State:</label></td><td><input type="text" id="State" name="State"/></td></tr>
+        <!--EJ Company Zip-->
+        <tr><td><label for="Zip">Zip Code:</label></td><td><input type="text" id="Zip" name="Zip"/></td></tr>
 
-      <label for="Firstname">First Name:</label>
-
-      <input type="text" id="Firstname" name="Firstname"/><br/>
-
-      <label for="Lastname">Last Name:</label>
-      <input type="text" id="Lastname" name="Lastname"/><br/>
-
-      <label for="Email">Email:</label>
-      <input type="text" id="Email" name="Email"/><br/>
-
-      <label for ="Phone">Phone:</label>
-      <input type="text" id="Phone" name="Phone"/><br/>
-
-
-      <h2>Company Information</h2>
-
-      <label for="Name1">Company Name:</label>
-      <input type="text" id="Name1" name="Name1"/><br/>
-
-      <label for="Street">Address 1:</label>
-      <input type="text" id="Street" name="Street"/><br/>
-
-      <label for="Line2">Address 2:</label>
-      <input type="text" id="Line2" name="Line2"/><br/>
-
-      <label for="City">City:</label>
-      <input type="text" id="City" name="City"/><br/>
-
-      <label for="State">State:</label>
-      <input type="text" id="State" name="State"/><br/>
-
-      <label for="Zip">Zip Code:</label>
-      <input type="text" id="Zip" name="Zip"/><br/>
+        <tr><th colspan="2"><br>Schedule</th></tr>
+        <tr><td colspan="2"><i>When will we recieve your non working equipment?
+                            <br>-or-When would you like our technician on site?
+          <tr><td><label for="StartDate">Start Date:</label><label style="color:red;">*</label></td><td><input type="date" id="StartDate" name="StartDate"/></td></tr>
 
 
-      <h2>Event Information</h2>
-
-	  <label for="ServiceType">Service Type:</label>
-      <select name="ServiceType" id="ServiceType">
-        <option value="Delivery">Delivery</option>
-        <option value="Setup">Setup</option>
-        <option value="Full Service">Show</option>
-      </select><br/>
-
-      <label for="ProjectName">Event Name:</label>
-      <input type="text" id="ProjectName" name="ProjectName"/><br/>
-
-      <label for="Location">Event Location:</label>
-      <input type="text" id="Location" name="Location"/><br/>
+          <tr><td><label for="EndDate">Requested completion Date:</label><label style="color:red;">*</label></td><td><input type="date" id="EndDate" name="EndDate"/></td></tr>
 
 
 
-      <label for="StartDate">Equipment Need Begins:</label>
-      <input type="date" id="StartDate" name="StartDate"/><br/>
 
-      <label for="EndDate">Equipment Need Ends:</label>
-      <input type="date" id="EndDate" name="EndDate"/><br/>
 
-      <label for="Setup">Setup Days & Times</label>
-      <input type="text" id="Setup" name="Setup"/><br/>
+        <tr><th colspan="2"><br>Service Request</th></tr>
+        <!--EJ Project Name-->
+        <tr><td><label for="ProjectName">Model Number:</label><label style="color:red;">*</label></td><td><input type="text" id="ProjectName" name="ProjectName"/></td></tr>
+        <!--EJ NOTES-->
+        <tr><td><label for="Serial Number">Serial Number:</label></td><td><input type="textarea" id="Serial Number" name="Serial Number"/></td></tr>
+        <tr>
+          <tr><td><label for="EquipmentService">Service Type:</label></td><td>
+            <select name="EquipmentService" id="EquipmentService">
+              <option value="Provide estimate"> </option>
+              <option value="Provide estimate">Provide Estimate</option>
+              <option value="Warranty">Warranty</option>
+              <option value="Authorize Repair up to $200">Authorize Repair up to $200</option>
+              <option value="Authorize Repair up to $500">Authorize Repair up to $500</option>
+              <option value="Authorize Repair up to $1000">Authorize Repair up to $1000</option>
+              <option value="Repair at any cost">Repair at any cost</option>
+            </select></td></tr>
 
-      <label for="ShowDays">Event Days & Times</label>
-      <input type="text" id="ShowDays" name="ShowDays"/><br/>
 
-      <label for="Strike">Strike Days & Times</label>
-      <input type="text" id="Strike" name="Strike"/><br/>
-
-      <label for="Comment"><h2>Description of event or equipment list:</h2></label>
-	    <textarea id="Comment" name="Comment" cols="40" rows="10"></textarea><br/>
-
-	    <input type="submit" value="Submit"/>
-
+          <!--EJ Comment (Notes)-->
+          <tr><td colspan="2">Problem Description:
+	        <tr><td colspan="2"><textarea id="Comment" name="Comment" cols="60" rows="10"></textarea></td></tr>
+          <tr><td colspan="2">I agree to the following pricing rates for non warranty repairs.<label style="color:red;">*</label></td></tr>
+          <tr><td><label for="PriceAgree"><i>&emsp;Bench Service $105/hr Min 1 hr
+            <br>&emsp;Field Service $115/hr + $35/hr travel</i></td><td><input type="checkbox" id="PriceAgree" name="PriceAgree"/></td></tr>
+          <tr><td><label for="Terms"><br>I agree to terms listd below.</label><label style="color:red;">*</label></td><td><input type="checkbox" id="Terms" name="Terms"/></td></tr>
+          <tr><td><input type="submit" value="Submit"/></td></tr>
+        </table>
+        <p width="50%">Lighthouse Productions charges a minimum of (1) hour service/evaluation rate for all work not covered under manufacturer warranty. Warranty status of the equipment shall be determined by the conditions of the manufacturer warranty. Some manufacturers may require the original, dated, bill of sale for the equipment in order to authorize warranty service. If Lighthouse Productions is unable to reproduce Customer complaint, the minimum service rate is still due regardless of warranty status. Parts required for service and/or repair are billed in addition to labor charges. If the Customer declines further service for any reason after initial inspection, the minimum shop service rate will still be charged.
+        Payment is due at time of pickup, unless otherwise determined by open account status. Lighthouse Productions reserves the right to hold equipment until payment is made in full.
+        Equipment not picked up within 30 days from service completion will either (1) incur a storage fee, or (2) be disposed of, at the discretion of Lighthouse Productions. Disposal of equipment shall not void any payments due to Lighthouse Productions for services provided.
+        I agree to all listed terms and conditions as stated above and personally guarantee payment, or am an authorized
+        agent of purchasing entity</p>
 <!-- DO NOT MODIFY BELOW THIS LINE -->
     </form>
 
-
-//don't touch below here
   </div></div></div>
   </body>
 </html>
