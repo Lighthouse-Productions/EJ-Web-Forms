@@ -139,7 +139,7 @@ h1 {
 <!-- DO NOT MODIFY ABOVE THIS LINE -->
       <table align="center">
         <tr><th colspan="2">Event Inquiry Form</th></tr>
-        <tr><td align="center" colspan="2"><i>The following information will help us to accurately quote your event.<br>Please provide as much information as possible.<br><label style="color:red;">*</label>Required Fields</i></td></tr>
+        <tr><td colspan="2"><i><label style="color:red;">*</label>Required Fields</i></td></tr>
         <tr><th colspan="2"><br>Contact Information</th></tr>
         <!--EJ Contact First Name-->
         <tr><td><label for="Firstname">First Name:</label><label style="color:red;">*</label></td><td><input type="text" id="Firstname" name="Firstname" required/></td></tr>
@@ -163,56 +163,10 @@ h1 {
         <tr><td><label for="State">State:</label></td><td><input type="text" id="State" name="State"/></td></tr>
         <!--EJ Company Zip-->
         <tr><td><label for="Zip">Zip Code:</label></td><td><input type="text" id="Zip" name="Zip"/></td></tr>
-        <tr><th colspan="2"><br>Rental Information</th></tr>
-        <!--EJ Project Name-->
-        <tr><td><label for="ProjectName">Event Name:</label><label style="color:red;">*</label></td><td><input type="text" id="ProjectName" name="ProjectName" required/></td></tr>
-        <tr><td><label for="ServiceType">Service Type:</label></td><td>
-          <select name="ServiceType" id="ServiceType">
-            <option value="Full-Service"> </option>
-            <option value="Customer Pickup">Customer Pickup/Return</option>
-            <option value="Delivery Items">Lighthouse Delivery/Return</option>
-            <option value="Full-Service">Lighthouse Deliver/Setup/Strike/Return</option>
-
-        <!--EJ NOTES-->
-        <tr><th colspan="2"><br>Venue Location</th></tr>
-        <tr><td align="center" colspan="2"><i>Only needed if LH Delivery/Pickup is requested</i><td></tr>
-        <tr><td><label for="Venue Location">Venue Name:</label></td><td><input type="textarea" id="Venue Location" name="Venue Name"/></td></tr>
-        <tr><td align="center" colspan="2"><i>If this is a "new to Lighthouse venue" <br>please provide additional information.</i></td></tr>
-        <!--EJ Notes-->
-        <tr><td><label for="Venue Street">Venue Address 1:</label></td><td><input type="text" id="Venue Street" name="Venue Street"/></td></tr>
-        <!--EJ Notes-->
-        <tr><td><label for="Venue City">Venue City:</label></td><td><input type="text" id="City" name="Venue City"/></td></tr>
-        <!--EJ Notes-->
-        <tr><td><label for="Venue State">Venue State:</label></td><td><input type="text" id="Venue State" name="Venue State"/></td></tr>
-        <!--EJ Notes-->
-        <tr><td><label for="Venue Zip"> Venue Zip Code:</label></td><td><input type="textbox" id="Venue Zip" name="Venue Zip"/></td></tr>
-        <tr><td><label for="Delivery Instructions">Delivery Instructions:<i>
-                    <br>&emsp;Delivery Time?
-                    <br>&emsp;Specific location?
-                    <br>&emsp;Delivery contact?
-                    <br>&emsp;Other?</i> </label></td><td><textarea rows="7" id="Venue Notes" name="Venue Notes"/></textarea></td></tr>
-
-        <tr><th colspan="2"><br>Schedule</th></tr>
-          <tr><td><label for="StartDate">Pickup/Delivery Date:</label><label style="color:red;">*</label></td><td><input type="date" id="StartDate" name="StartDate" required/></td></tr>
-          <tr><td><label for="StartNotes">Pickup/Delivery Time or Notes:</label></td><td><input type="text" id="StartNotes" name="StartNotes"/></td></tr>
-          <tr><td><label for="EndDate">End Date:</label><label style="color:red;">*</label></td><td><input type="date" id="EndDate" name="EndDate" required/></td></tr>
-  <tr><td><label for="EndNotes">Return/Pickup Time or Notes:</label></td><td><input type="text" id="EndNotes" name="EndNotes"/></td></tr>
-          <tr><td><label for="End">When is the show(s)?</label></td><td><input type="text" id="ShowDays" name="ShowDays"/></td></tr>
-                    <tr><th colspan="2"><label for="Comment"><br>Description of event or equipment list:</label></th></tr>
 
           <!--EJ Comment (Notes)-->
-          <tr><td colspan="2"><br>What Equipment would you like to rent?
+          <tr><td colspan="2"><br>What can we help you with?
           <tr><td colspan="2"><textarea id="Comment" name="Comment" cols="60" rows="10"></textarea></td></tr>
-          <tr><td colspan="2">Hint, please include any helpful information including any of the following:
-           <i><br>&emsp;List of specific equipment you need.
-              <br>&emsp;What type of event is this?
-              <br>&emsp;General problem you are trying to solve?
-              <br>&emsp;Are your dates subject to change?
-              <br>&emsp;What is the budget?
-              <br>&emsp;Is this the same event as last year?
-              <br>&emsp;  -Job number from last year?
-              <br>&emsp;  -Any changes from last year?
-              <br>&emsp;Other?
           <tr><td><br><br><input type="submit" value="Submit"/></td></tr>
         </table>
 

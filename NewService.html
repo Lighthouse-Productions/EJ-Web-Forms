@@ -142,16 +142,16 @@ h1 {
         <tr><th colspan="2"><i>The following information is required for service.<br><label style="color:red;">*</label>Required Fields</i></th></tr>
         <tr><th colspan="2"><br>Contact Information</th></tr>
         <!--EJ Contact First Name-->
-        <tr><td><label for="Firstname">First Name:</label><label style="color:red;">*</label></td><td><input type="text" id="Firstname" name="Firstname"/></td></tr>
+        <tr><td><label for="Firstname">First Name:</label><label style="color:red;">*</label></td><td><input type="text" id="Firstname" name="Firstname" required/></td></tr>
         <!--EJ Contact Last Name-->
-        <tr><td><label for="Lastname">Last Name:</label><label style="color:red;">*</label></td><td><input type="text" id="Lastname" name="Lastname"/></td></tr>
+        <tr><td><label for="Lastname">Last Name:</label><label style="color:red;">*</label></td><td><input type="text" id="Lastname" name="Lastname" required/></td></tr>
         <!--EJ Company Email-->
-        <tr><td><label for="Email">Email:</label><label style="color:red;">*</label></td><td><input type="text" id="Email" name="Email"/></td></tr>
+        <tr><td><label for="Email">Email:</label><label style="color:red;">*</label></td><td><input type="text" id="Email" name="Email" required/></td></tr>
         <!--EJ Company Phone-->
-        <tr><td><label for ="Phone">Phone:</label><label style="color:red;">*</label></td><td><input type="text" id="Phone" name="Phone"/></td></tr>
+        <tr><td><label for ="Phone">Phone:</label><label style="color:red;">*</label></td><td><input type="text" id="Phone" name="Phone" required/></td></tr>
         <tr><th colspan="2"><br>Billing Information</h2></th></tr>
         <!--EJ Company Name-->
-        <tr><td><label for="Name1">Company Name:</label><label style="color:red;">*</label></td><td><input type="text" id="Name1" name="Name1"/></td></tr>
+        <tr><td><label for="Name1">Company Name:</label><label style="color:red;">*</label></td><td><input type="text" id="Name1" name="Name1" required/></td></tr>
         <tr><td colspan="2">&emsp;<i>Enter your name if not affiliated with a company.</i></td></tr>
         <!--EJ Company Name2 -->
       <!--  <tr><td><label for="Line2">Address 2:</label></td><td><input type="text" id="Line2" name="Line2"/></td></tr> -->
@@ -167,10 +167,10 @@ h1 {
         <tr><th colspan="2"><br>Schedule</th></tr>
         <tr><td colspan="2"><i>When will we recieve your non working equipment?
                             <br>-or-When would you like our technician on site?
-          <tr><td><label for="StartDate">Start Date:</label><label style="color:red;">*</label></td><td><input type="date" id="StartDate" name="StartDate"/></td></tr>
+          <tr><td><label for="StartDate">Start Date:</label><label style="color:red;">*</label></td><td><input type="date" id="StartDate" name="StartDate" required/></td></tr>
 
 
-          <tr><td><label for="EndDate">Requested completion Date:</label><label style="color:red;">*</label></td><td><input type="date" id="EndDate" name="EndDate"/></td></tr>
+          <tr><td><label for="EndDate">Requested completion Date:</label><label style="color:red;">*</label></td><td><input type="date" id="EndDate" name="EndDate" required/></td></tr>
 
 
 
@@ -178,11 +178,11 @@ h1 {
 
         <tr><th colspan="2"><br>Service Request</th></tr>
         <!--EJ Project Name-->
-        <tr><td><label for="ProjectName">Model Number:</label><label style="color:red;">*</label></td><td><input type="text" id="ProjectName" name="ProjectName"/></td></tr>
+        <tr><td><label for="ProjectName">Model Number:</label><label style="color:red;">*</label></td><td><input type="text" id="ProjectName" name="ProjectName" required/></td></tr>
         <!--EJ NOTES-->
         <tr><td><label for="Serial Number">Serial Number:</label></td><td><input type="textarea" id="Serial Number" name="Serial Number"/></td></tr>
         <tr>
-          <tr><td><label for="EquipmentService">Service Type:</label></td><td>
+          <tr><td><label for="EquipmentService" required>Service Type:</label><label style="color:red;">*</label></td><td>
             <select name="EquipmentService" id="EquipmentService">
               <option value="Provide estimate"> </option>
               <option value="Provide estimate">Provide Estimate</option>
@@ -195,19 +195,21 @@ h1 {
 
 
           <!--EJ Comment (Notes)-->
-          <tr><td colspan="2">Problem Description:
-	        <tr><td colspan="2"><textarea id="Comment" name="Comment" cols="60" rows="10"></textarea></td></tr>
+          <tr><td colspan="2">Problem Description:<label style="color:red;">*</label>
+	        <tr><td colspan="2"><textarea id="Comment" name="Comment" cols="60" rows="10" required></textarea></td></tr>
           <tr><td colspan="2">I agree to the following pricing rates for non warranty repairs.<label style="color:red;">*</label></td></tr>
           <tr><td><label for="PriceAgree"><i>&emsp;Bench Service $105/hr Min 1 hr
             <br>&emsp;Field Service $115/hr + $35/hr travel</i></td><td><input type="checkbox" id="PriceAgree" name="PriceAgree"/></td></tr>
-          <tr><td><label for="Terms"><br>I agree to terms listd below.</label><label style="color:red;">*</label></td><td><input type="checkbox" id="Terms" name="Terms"/></td></tr>
+          <tr><td><br><Label>Terms and Conditions.</label></td></tr>
+          <tr><td colspan="2"><textarea id="T&C" name="T&C" cols="60" rows="10" readonly>Lighthouse Productions charges a minimum of (1) hour service/evaluation rate for all work not covered under manufacturer warranty. Warranty status of the equipment shall be determined by the conditions of the manufacturer warranty. Some manufacturers may require the original, dated, bill of sale for the equipment in order to authorize warranty service. If Lighthouse Productions is unable to reproduce Customer complaint, the minimum service rate is still due regardless of warranty status. Parts required for service and/or repair are billed in addition to labor charges. If the Customer declines further service for any reason after initial inspection, the minimum shop service rate will still be charged.
+          Payment is due at time of pickup, unless otherwise determined by open account status. Lighthouse Productions reserves the right to hold equipment until payment is made in full.
+          Equipment not picked up within 30 days from service completion will either (1) incur a storage fee, or (2) be disposed of, at the discretion of Lighthouse Productions. Disposal of equipment shall not void any payments due to Lighthouse Productions for services provided.
+          I agree to all listed terms and conditions as stated above and personally guarantee payment, or am an authorized
+          agent of purchasing entity.</textarea></td></tr>
+          <tr><td><label for="Terms">I agree to terms listd above.</label><label style="color:red;">*</label></td><td><input type="checkbox" id="Terms" name="Terms"/></td></tr>
           <tr><td><input type="submit" value="Submit"/></td></tr>
         </table>
-        <p width="50%">Lighthouse Productions charges a minimum of (1) hour service/evaluation rate for all work not covered under manufacturer warranty. Warranty status of the equipment shall be determined by the conditions of the manufacturer warranty. Some manufacturers may require the original, dated, bill of sale for the equipment in order to authorize warranty service. If Lighthouse Productions is unable to reproduce Customer complaint, the minimum service rate is still due regardless of warranty status. Parts required for service and/or repair are billed in addition to labor charges. If the Customer declines further service for any reason after initial inspection, the minimum shop service rate will still be charged.
-        Payment is due at time of pickup, unless otherwise determined by open account status. Lighthouse Productions reserves the right to hold equipment until payment is made in full.
-        Equipment not picked up within 30 days from service completion will either (1) incur a storage fee, or (2) be disposed of, at the discretion of Lighthouse Productions. Disposal of equipment shall not void any payments due to Lighthouse Productions for services provided.
-        I agree to all listed terms and conditions as stated above and personally guarantee payment, or am an authorized
-        agent of purchasing entity</p>
+
 <!-- DO NOT MODIFY BELOW THIS LINE -->
     </form>
 

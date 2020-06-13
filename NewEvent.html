@@ -165,9 +165,9 @@ h1 {
         <tr><td><label for="Zip">Zip Code:</label></td><td><input type="text" id="Zip" name="Zip"/></td></tr>
         <tr><th colspan="2"><br>Event Location</th></tr>
         <!--EJ Project Name-->
-        <tr><td><label for="ProjectName">Event Name:</label><label style="color:red;">*</label></td><td><input type="text" id="ProjectName" name="ProjectName"/></td></tr>
+        <tr><td><label for="ProjectName">Event Name:</label><label style="color:red;">*</label></td><td><input type="text" id="ProjectName" name="ProjectName" required/></td></tr>
         <!--EJ NOTES-->
-        <tr><td><label for="Venue Location">Venue Name:</label><label style="color:red;">*</label></td><td><input type="textarea" id="Venue Location" name="Venue Name"/></td></tr>
+        <tr><td><label for="Venue Location">Venue Name:</label><label style="color:red;">*</label></td><td><input type="textarea" id="Venue Location" name="Venue Name" required/></td></tr>
         <tr><td colspan="2"><i>If this is a "new to Lighthouse venue" <br>please provide additional information.</i></td></tr>
         <!--EJ Notes-->
         <tr><td><label for="Venue Street">Venue Address 1:</label></td><td><input type="text" id="Venue Street" name="Venue Street"/></td></tr>
@@ -187,12 +187,12 @@ h1 {
                     <br>&emsp;Other?</i> </label></td><td><textarea rows="7" id="Venue Notes" name="Venue Notes"/></textarea></td></tr>
 
         <tr><th colspan="2"><br>Schedule</th></tr>
-          <tr><td><label for="StartDate">Start Date:</label><label style="color:red;">*</label></td><td><input type="date" id="StartDate" name="StartDate"/></td></tr>
-          <tr><td><label for="EndDate">End Date:</label><label style="color:red;">*</label></td><td><input type="date" id="EndDate" name="EndDate"/></td></tr>
+          <tr><td><label for="StartDate">Start Date:</label><label style="color:red;">*</label></td><td><input type="date" id="StartDate" name="StartDate" required/></td></tr>
+          <tr><td><label for="EndDate">End Date:</label><label style="color:red;">*</label></td><td><input type="date" id="EndDate" name="EndDate" required/></td></tr>
           <tr><td><label for="Setup">When is setup?</label></td><td><input type="text" id="Setup" name="Setup"/></td></tr>
           <tr><td><label for="ShowDays">When is the show(s)?</label></td><td><input type="text" id="ShowDays" name="ShowDays"/></td></tr>
           <tr><td><label for="Strike">When is take down?</label></td><td><input type="text" id="Strike" name="Strike"/></td></tr>
-          <tr><th colspan="2"><label for="Comment">Description of event or equipment list:</label></th></tr>
+          <tr><th colspan="2"><label for="Comment"><br>Description of event or equipment list:</label></th></tr>
           <tr><td><label for="ServiceType">Service Type:</label></td><td>
             <select name="ServiceType" id="ServiceType">
               <option value="Full-Service"> </option>
@@ -201,21 +201,26 @@ h1 {
               <option value="Full-Service">Rental</option>
             </select></td></tr>
           <!--EJ Comment (Notes)-->
-          <tr><td colspan="2">Additional helpful Information:
+          <tr><td colspan="2"><br>Additional helpful Information:
+          <tr><td colspan="2"><textarea id="Comment" name="Comment" cols="60" rows="10"></textarea></td></tr>
+          <tr><td colspan="2">Hint, helpful information might include any of the following:
            <i><br>&emsp;What type of event is this?
               <br>&emsp;How many people are you expecting?
               <br>&emsp;What type of equipment do you need
-              <Br>&emsp;(Sound,Lights,Video,Stage,Backline,Power)?
+              <Br>&emsp;    (Sound,Lights,Video,Stage,Backline,Power)?
               <br>&emsp;What is the schedule?
               <br>&emsp;What entertainers are performing?
               <br>&emsp;Do you have a rider from your entertainers?
               <br>&emsp;Are your dates subject to change?
               <br>&emsp;Who is providing hotels if needed?
               <br>&emsp;Are stagehands provided?
+              <br>&emsp;What is the budget?
               <br>&emsp;Do you have a rider from your entertainer?
+              <br>&emsp;Is this the same event as last year?
+              <br>&emsp;  -Job number from last year?
+              <br>&emsp;  -Any changes from last year?
               <br>&emsp;Other?
-	        <tr><td colspan="2"><textarea id="Comment" name="Comment" cols="60" rows="10"></textarea></td></tr>
-          <tr><td><input type="submit" value="Submit"/></td></tr>
+          <tr><td><br><br><input type="submit" value="Submit"/></td></tr>
         </table>
 
 <!-- DO NOT MODIFY BELOW THIS LINE -->
